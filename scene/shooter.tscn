@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3 uid="uid://copwbnuv05n62"]
+
+[ext_resource type="Texture2D" uid="uid://bacq3v1ny2ko3" path="res://envi/crush.png" id="1_7yx5a"]
+[ext_resource type="Script" path="res://asset/script/shooter.gd" id="2_1p34u"]
+
+[sub_resource type="Animation" id="Animation_2qeys"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(10, 10, 10, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_u7rkq"]
+resource_name = "Shoot"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(10, 10, 10, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"spawn_projectile"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j1um5"]
+_data = {
+"RESET": SubResource("Animation_2qeys"),
+"Shoot": SubResource("Animation_u7rkq")
+}
+
+[node name="Shooter" type="Sprite2D"]
+self_modulate = Color(10, 10, 10, 1)
+scale = Vector2(0.3125, 0.390625)
+texture = ExtResource("1_7yx5a")
+script = ExtResource("2_1p34u")
+power = 500
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j1um5")
+}
+autoplay = "Shoot"

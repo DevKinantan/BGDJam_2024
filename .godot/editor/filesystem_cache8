@@ -1,3 +1,32 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1704435670
+::res://::1704597129
 icon.png::CompressedTexture2D::5104510498646482247::1704435620::1704435697::1::::<><>::
+map.tscn::PackedScene::2887716045176490558::1704596660::0::1::::<><>::uid://dnafoec2jmxqg::::res://envi/tile.png<>uid://e3fq2px2ibua::::res://envi/tiletembok.png<>uid://c7c4ewc5dntnw::::res://envi/sky.png<>uid://dbaxb03ecoida::::res://envi/tile2.png<>uid://j1f8u2ghwl1u::::res://envi/city.png<>uid://mdiwt07jp3ca::::res://envi/spark.png<>uid://clbhptoadjphr::::res://envi/character.png<>uid://dx8yd4r7kk7ig::::res://envi/sky2.png<>uid://d5x7jdjimdog::::res://envi/cloud.png<>uid://cvgboxguemu6y::::res://envi/cloud2.png<>uid://bacq3v1ny2ko3::::res://envi/crush.png<>uid://uf3yq2a8qqym::::res://envi/spikewakeup.png<>uid://d3qqenmwsj63y::::res://envi/moon.png<>uid://bxijim2xg8u53::::res://envi/trees.png<>uid://doc72x1p3vtjh::::res://scene/player.tscn
+::res://asset/::1704506447
+::res://asset/character/::1704563439
+character sheets.png::CompressedTexture2D::153382323131841921::1704561659::1704563439::1::::<><>::
+character.png::CompressedTexture2D::4254257135904489115::1704498921::1704500130::1::::<><>::
+kunci.png::CompressedTexture2D::390084069835791068::1704561650::1704563439::1::::<><>::
+::res://asset/script/::1704596658
+Player.gd::GDScript::-1::1704596658::0::1::::<>CharacterBody2D<>::
+::res://envi/::1704593697
+character.png::CompressedTexture2D::5547435850591851699::1704472452::1704593697::1::::<><>::
+city.png::CompressedTexture2D::685737022970106836::1704472234::1704593697::1::::<><>::
+cloud2.png::CompressedTexture2D::6259280286637105318::1704505462::1704593697::1::::<><>::
+cloud.png::CompressedTexture2D::273951977539125422::1704472234::1704593697::1::::<><>::
+crush.png::CompressedTexture2D::2391572057093894808::1704472234::1704593697::1::::<><>::
+moon.png::CompressedTexture2D::9158559034434278132::1704504512::1704593697::1::::<><>::
+proyektilanimation.png::CompressedTexture2D::6167664240155235049::1704472234::1704593697::1::::<><>::
+sky2.png::CompressedTexture2D::8843194036752686918::1704482682::1704593697::1::::<><>::
+sky.png::CompressedTexture2D::7024782215248122100::1704482652::1704593697::1::::<><>::
+spark.png::CompressedTexture2D::848985318356953084::1704504862::1704593697::1::::<><>::
+spikeanimation.png::CompressedTexture2D::6267260226040442137::1704472234::1704593697::1::::<><>::
+spikesleep.png::CompressedTexture2D::5889041575159745221::1704472234::1704593697::1::::<><>::
+spikewakeup.png::CompressedTexture2D::1415842578510193868::1704494894::1704593697::1::::<><>::
+tile2.png::CompressedTexture2D::7230850527868120342::1704491462::1704593697::1::::<><>::
+tile.png::CompressedTexture2D::8072045818874516690::1704480760::1704593697::1::::<><>::
+tiletembok.png::CompressedTexture2D::338891551716046140::1704479172::1704593697::1::::<><>::
+trees.png::CompressedTexture2D::4017840521730736368::1704506870::1704593697::1::::<><>::
+::res://scene/::1704596994
+level.tscn::PackedScene::8056363205809832676::1704596660::0::1::::<><>::uid://doc72x1p3vtjh::::res://scene/player.tscn
+player.tscn::PackedScene::8148027026645599693::1704596994::0::1::::<><>::res://asset/script/Player.gd<>uid://cgkgjhytr4av::::res://asset/character/character sheets.png<>uid://fs7vlsxryooy::::res://asset/character/kunci.png

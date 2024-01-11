@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://btsescn2penmv"]
+
+[ext_resource type="Script" path="res://asset/script/Projectile.gd" id="1_viv37"]
+[ext_resource type="Texture2D" uid="uid://ct4wr8o88d6iv" path="res://envi/proyektilanimation.png" id="2_efkx3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pg2nl"]
+radius = 6.4
+
+[sub_resource type="Animation" id="Animation_5oh4h"]
+resource_name = "Projectile"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_ml80k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wwyv2"]
+_data = {
+"Projectile": SubResource("Animation_5oh4h"),
+"RESET": SubResource("Animation_ml80k")
+}
+
+[node name="Projectile" type="RigidBody2D"]
+collision_layer = 2
+mass = 0.01
+gravity_scale = 0.0
+max_contacts_reported = 2
+contact_monitor = true
+linear_velocity = Vector2(-500, 0)
+script = ExtResource("1_viv37")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_efkx3")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pg2nl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wwyv2")
+}
+autoplay = "Projectile"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

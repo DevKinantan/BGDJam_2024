@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm1teipbtsdfo"]
+
+[ext_resource type="PackedScene" uid="uid://doc72x1p3vtjh" path="res://scene/player.tscn" id="1_4an50"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2s44l"]
+size = Vector2(458, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_86v1n"]
+size = Vector2(20, 279.25)
+
+[node name="Level" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_4an50")]
+position = Vector2(60, 223)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(229, 260)
+shape = SubResource("RectangleShape2D_2s44l")
+
+[node name="Wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(0, 129.375)
+shape = SubResource("RectangleShape2D_86v1n")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+position = Vector2(458, 129.25)
+shape = SubResource("RectangleShape2D_86v1n")

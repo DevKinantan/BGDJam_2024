@@ -11,5 +11,18 @@ config_version=5
 [application]
 
 config/name="BGDJam_2024"
+run/main_scene="res://maptweak.tscn"
 config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"
+
+[display]
+
+window/size/viewport_width=455
+window/size/viewport_height=256
+window/size/mode=2
+window/stretch/mode="viewport"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"

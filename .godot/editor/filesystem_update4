@@ -1,0 +1,4 @@
+res://scene/player.tscn
+res://scene/level.tscn
+res://map.tscn
+res://asset/script/Player.gd
