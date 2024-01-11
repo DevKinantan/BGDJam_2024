@@ -604,7 +604,7 @@ metadata/_edit_lock_ = true
 process_mode = 3
 top_level = true
 z_index = 10
-position = Vector2(726, -1643)
+position = Vector2(83, 911)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -749,18 +749,15 @@ position = Vector2(295, -2239.13)
 shape = SubResource("RectangleShape2D_7t02u")
 
 [node name="Character" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(549, -2122)
 texture = ExtResource("16_wyr2u")
 
 [node name="Character2" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(503, -2120)
 texture = ExtResource("16_wyr2u")
 flip_h = true
 
 [node name="Character3" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(594, -2122)
 texture = ExtResource("16_wyr2u")
 flip_v = true

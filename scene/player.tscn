@@ -421,7 +421,7 @@ position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_0ukdx")
 
 [node name="BombTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 300.0
 one_shot = true
 
 [node name="Clock" type="AudioStreamPlayer" parent="."]
@@ -463,6 +463,8 @@ text = "300"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("9_aar3j")
+total_time = 300
+countdown = 300
 
 [node name="Timer" type="Timer" parent="CanvasLayer/CountdownTimer"]
 

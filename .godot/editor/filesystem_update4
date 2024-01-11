@@ -1,4 +1,4 @@
-res://scene/player.tscn
+res://maptweak.tscn
 res://scene/level.tscn
+res://scene/player.tscn
 res://map.tscn
-res://asset/script/Player.gd
